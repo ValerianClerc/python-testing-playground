@@ -4,8 +4,8 @@ from tinydb import TinyDB, Query
 from functools import wraps
 
 app = Flask(__name__)
-app.wsgi_app = middleware.Middleware(app.wsgi_app)
 db = TinyDB('./db.json')
+host = os.getenv('HOST', '0.0.0.0')
 port = int( os.getenv( 'PORT', 5000 ) )
 api_token = os.getenv('API_TOKEN', 'this-is-an-api-token')
 
@@ -71,4 +71,4 @@ def delete(blog_title):
     return jsonify({'msg': 'blog deleted'}), 200
 
 if __name__ == '__main__':
-    app.run( host='0.0.0.0', port=port, debug=True)
+    app.run( host=host, port=port, debug=True)

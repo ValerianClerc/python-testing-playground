@@ -1,0 +1,5 @@
+language: python
+
+jobs:
+  include:
+    - script: python app.py
