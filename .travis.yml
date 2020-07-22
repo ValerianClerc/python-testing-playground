@@ -6,4 +6,5 @@ before_install:
 
 jobs:
   include:
+    - script: python app.py &
     - script: newman run ./test-collection.postman_collection.json -e test-env.postman_environment.json
