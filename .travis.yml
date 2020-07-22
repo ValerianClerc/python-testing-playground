@@ -1,5 +1,8 @@
 language: python
 
+before_install:
+  - npm install -g postman
+
 jobs:
   include:
-    - script: python app.py
+    - script: newman run ./test-collection.postman_collection.json -e test-env.postman_environment.json
