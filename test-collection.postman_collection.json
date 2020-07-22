@@ -7,6 +7,20 @@
 	"item": [
 		{
 			"name": "List Blogs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b3c57a0-32a2-48e7-91f3-dcaaa60640c0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -24,6 +38,20 @@
 		},
 		{
 			"name": "Create Blog",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f4c3fb7a-d4ff-48d9-97f4-c27263d40eb7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -49,9 +77,23 @@
 			"response": []
 		},
 		{
-			"name": "Delete Blog",
+			"name": "Show Blog",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98806fe0-acb2-4938-b019-083b709b8b6e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "DELETE",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "{{url}}/blogs/blog1",
@@ -67,9 +109,23 @@
 			"response": []
 		},
 		{
-			"name": "Show Blog",
+			"name": "Delete Blog",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "93b512f2-d6c8-4515-a425-69ac9c8813f1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": {
 					"raw": "{{url}}/blogs/blog1",
